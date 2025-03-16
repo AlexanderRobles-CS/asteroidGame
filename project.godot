@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/size/mode=3
+window/stretch/mode="viewport"
 window/defaults/default_clear_color=Color(0.3, 0.3, 0.3, 1)
 
 [dotnet]
