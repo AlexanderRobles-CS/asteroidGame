@@ -13,7 +13,7 @@ var score := 0:
 	set(value):
 		score = value
 		hud.score = score
-		
+		print("test")
 var lives: int:
 	set(value):
 		lives = value
