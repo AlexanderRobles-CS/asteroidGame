@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb2hk3cbpgwsc"]
+
+[ext_resource type="Texture2D" uid="uid://c2e6cjjkanypp" path="res://assets/UI/playerLife1_blue.png" id="1_fjxat"]
+
+[node name="UILife" type="TextureRect"]
+offset_right = 33.0
+offset_bottom = 26.0
+texture = ExtResource("1_fjxat")
