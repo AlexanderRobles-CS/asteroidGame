@@ -60,8 +60,9 @@ func spawn_asteroid(position, size):
 	asteroids.call_deferred("add_child", a)
 	
 func _on_player_died():
-	lives -= 1
 	$PlayerDieSound.play()
+	lives -= 1
+	player.global_position = player_spawn_pos.global_position
 	if lives <= 0:
 		await get_tree().create_timer(2).timeout
 		game_over_screen.visible = true
