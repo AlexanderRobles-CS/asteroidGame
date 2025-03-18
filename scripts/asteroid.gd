@@ -16,11 +16,11 @@ var points: int:
 	get:
 		match size:
 			AsteroidSize.LARGE:
-				return 100
+				return 25
 			AsteroidSize.MEDIUM:
 				return 50
 			AsteroidSize.SMALL:
-				return 25
+				return 100
 			_:
 				return 0
 
@@ -65,8 +65,6 @@ func _physics_process(delta: float) -> void:
 func explode():
 	emit_signal("exploded", global_position, size, points)
 	queue_free()
-	
-
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:

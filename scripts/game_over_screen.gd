@@ -1,4 +1,9 @@
 extends Control
 
+signal restartGame
+
 func _on_restart_button_pressed() -> void:
-	get_tree().reload_current_scene()
+	emit_signal("restartGame")
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()

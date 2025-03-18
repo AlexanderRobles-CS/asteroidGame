@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://da8spxb43m8fq"]
+
+[ext_resource type="Script" uid="uid://bhidurluprxa1" path="res://scripts/start_screen.gd" id="1_tx5wa"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_tx5wa")
+
+[node name="MenuSettings" type="VBoxContainer" parent="."]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -68.0
+offset_right = 35.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameTitle" type="Label" parent="MenuSettings"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Meteor Mayhem"
+
+[node name="Spacer" type="Control" parent="MenuSettings"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="PlayGame" type="Button" parent="MenuSettings"]
+layout_mode = 2
+text = "Play Game
+"
+
+[node name="Settings" type="Button" parent="MenuSettings"]
+layout_mode = 2
+text = "Settings
+"
+
+[node name="QuitGame" type="Button" parent="MenuSettings"]
+layout_mode = 2
+text = "Exit
+"
+
+[connection signal="pressed" from="MenuSettings/PlayGame" to="." method="_on_play_game_pressed"]
+[connection signal="pressed" from="MenuSettings/QuitGame" to="." method="_on_quit_game_pressed"]
