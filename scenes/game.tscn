@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b07kuocaxmkdr" path="res://scenes/hud.tscn" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://dkmk6gll4144e" path="res://scenes/game_over_screen.tscn" id="3_iywne"]
 [ext_resource type="PackedScene" uid="uid://ce31wcn2tfvcy" path="res://scenes/asteroid.tscn" id="3_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://da8spxb43m8fq" path="res://scenes/start_screen.tscn" id="4_vtaks"]
+[ext_resource type="PackedScene" path="res://scenes/start_screen.tscn" id="4_vtaks"]
 [ext_resource type="PackedScene" uid="uid://ds40ibysqog5n" path="res://scenes/player_spawn_area.tscn" id="6_p57ef"]
 [ext_resource type="AudioStream" uid="uid://cfe15flw5mfc2" path="res://assets/Sounds/laser_retro.wav" id="7_u5sy4"]
 [ext_resource type="AudioStream" uid="uid://dk1olrok5w1jt" path="res://assets/Sounds/hit_asteroid.wav" id="8_gee14"]
@@ -122,3 +122,5 @@ amount = 30
 lifetime = 140.0
 preprocess = 280.0
 process_material = SubResource("ParticleProcessMaterial_kvpfn")
+
+[node name="Shield" type="Node2D" parent="."]

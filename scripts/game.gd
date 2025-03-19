@@ -64,12 +64,31 @@ func _restart_Game():
 	game_over_screen.visible = false
 	score = 0
 	lives = 3
-	
+
 	# Clear all existing asteroids
-	#for asteroid in asteroids.get_children():
-		#asteroid.queue_free()
-		
-	# todo spawn asteroids
+	for asteroid in asteroids.get_children():
+		asteroid.queue_free()
+
+	asteroid_count = 0
+
+	# respawn asteroids
+	respawn_asteroids()
+	
+func respawn_asteroids():
+	# Spawn 4 large asteroids directly
+	for i in range(4):
+		var screen_size = get_viewport_rect().size
+		var random_position = Vector2(
+			randf_range(0, screen_size.x), 
+			randf_range(0, screen_size.y)
+		)
+		spawn_asteroid(random_position, Asteroid.AsteroidSize.LARGE)
+		asteroid_count += 1 
+
+	while !player_spawn_area.is_empty:
+		await get_tree().create_timer(0.1).timeout
+
+	player.respawn(player_spawn_pos.global_position)
 
 	while !player_spawn_area.is_empty:
 		await get_tree().create_timer(0.1).timeout
